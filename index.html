@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шукач — Ваш персональний мисливець за знижками в Telegram</title>
+    <meta name="description" content="Автоматичне відстеження цін у понад 50 магазинах України. Отримуйте сповіщення про знижки миттєво в Telegram." />
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: '#8B5CF6',
+                        accent: '#F472B6',
+                        success: '#10B981',
+                        'text-heading': '#0F172A',
+                        'text-body': '#64748B',
+                        'bg-main': '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            /* 
+               Tailwind "Mixins" (Components)
+               Ці класи дозволяють уникнути довгих інлайн-стилів
+            */
+            
+            /* Glassmorphism Effect */
+            .glass-premium {
+                @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl shadow-gray-200/50;
+            }
+
+            /* Container Mixin */
+            .section-container {
+                @apply max-w-7xl mx-auto px-6 lg:px-8;
+            }
+
+            /* Button Mixins */
+            .btn-base {
+                @apply inline-flex items-center justify-center gap-2 font-bold transition-all duration-300 rounded-full active:scale-95;
+            }
+            
+            .btn-primary-new {
+                @apply btn-base bg-gradient-to-br from-brand to-brand-light text-white px-8 py-3.5 shadow-lg shadow-brand/25 hover:shadow-brand/40 hover:-translate-y-0.5;
+            }
+
+            .btn-secondary-new {
+                @apply btn-base bg-white text-text-heading border border-gray-100 px-8 py-3.5 hover:bg-gray-50 hover:border-brand/30;
+            }
+
+            /* Card Mixin */
+            .card-premium-new {
+                @apply bg-white rounded-3xl border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+
+            /* Typography Mixins */
+            .title-hero {
+                @apply text-5xl md:text-7xl font-extrabold tracking-tight text-text-heading leading-[1.1];
+            }
+
+            .text-gradient-new {
+                @apply bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent;
+            }
+
+            /* Layout Mixins */
+            .flex-center {
+                @apply flex items-center justify-center;
+            }
+            
+            .flex-between {
+                @apply flex items-center justify-between;
+            }
+
+            /* Premium Effects */
+            .hover-lift {
+                @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+            }
+
+            .glass-card {
+                @apply bg-white/40 backdrop-blur-md border border-white/40 rounded-3xl shadow-sm hover:shadow-md transition-all;
+            }
+
+            .badge-premium {
+                @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20;
+            }
+
+            .input-field {
+                @apply w-full px-4 py-3 rounded-2xl border border-gray-200 focus:border-brand focus:ring-4 focus:ring-brand/10 outline-none transition-all;
+            }
+        }
+    </style>
+  </head>
+  <body class="bg-[#F8FAFC]">
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
