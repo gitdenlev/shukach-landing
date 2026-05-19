@@ -9,9 +9,9 @@ import ScrollToTop from './components/ScrollToTop.vue'
   <div class="antialiased overflow-x-hidden relative min-h-screen flex flex-col">
     <div class="bg-mesh"></div>
     <Header />
-    <div class="flex-grow">
+    <main class="flex-grow">
       <router-view />
-    </div>
+    </main>
     <Footer />
     <CookieConsent />
     <ScrollToTop />

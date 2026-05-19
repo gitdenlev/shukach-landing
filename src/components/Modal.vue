@@ -1,4 +1,5 @@
 <script setup>
+import { PhX } from '@phosphor-icons/vue'
 defineProps({
   show: Boolean,
   title: String
@@ -27,9 +28,10 @@ defineEmits(['close'])
             <h3 class="text-2xl font-extrabold text-text-heading tracking-tight">{{ title }}</h3>
             <button 
               @click="$emit('close')"
+              aria-label="Закрити"
               class="w-10 h-10 rounded-full bg-bg-main flex items-center justify-center text-text-body hover:text-text-heading transition-colors"
             >
-              <i class="ph ph-x text-xl"></i>
+              <PhX :size="20" />
             </button>
           </div>
           

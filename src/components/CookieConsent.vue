@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// Default true to avoid a flash of the banner on already-accepted sessions
 const isAccepted = ref(true)
 
 onMounted(() => {
@@ -16,7 +15,6 @@ function acceptCookies() {
 }
 
 function declineCookies() {
-  // Зберігаємо 'false', щоб не турбувати користувача знову в цій сесії
   localStorage.setItem('shukach_cookie_consent', 'false')
   isAccepted.value = true
 }
@@ -35,13 +33,13 @@ function declineCookies() {
                md:rounded-3xl md:border md:border-slate-100"
       >
         <!-- Content stack: Heading -> Description -> Buttons Row -->
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gaap-4">
           <!-- Text content -->
           <div class="text-left">
             <p class="text-sm font-bold text-slate-900 tracking-tight mb-1.5">
               🍪 Налаштування cookie-файлів
             </p>
-            <p class="text-xs text-slate-500 font-medium leading-relaxed">
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
               Ми використовуємо файли cookie для покращення вашого досвіду.
               Дізнайтесь більше в нашій
               <router-link
@@ -55,7 +53,7 @@ function declineCookies() {
           <div class="flex items-center gap-6">
             <button
               @click="declineCookies"
-              class="text-xs font-bold text-slate-400 hover:text-slate-600 transition-colors"
+              class="text-xs font-bold text-slate-600 hover:text-slate-800 transition-colors"
             >
               Відхилити
             </button>
@@ -75,7 +73,6 @@ function declineCookies() {
 </template>
 
 <style scoped>
-/* Slide-up enter: banner starts below the viewport and rises into position */
 .slide-up-enter-active,
 .slide-up-leave-active {
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),

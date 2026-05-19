@@ -23,10 +23,11 @@
           <div class="relative bg-white p-6 rounded-3xl shadow-2xl border border-border-subtle">
             <div class="w-48 h-48 rounded-xl flex items-center justify-center">
               <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://t.me/shukach_ua_bot"
-                alt="QR-код для переходу в Telegram-бот Шукач — автоматичний моніторинг цін та знижок" loading="lazy" class="w-full h-full p-2" />
+                alt="QR-код для переходу в Telegram-бот Шукач — автоматичний моніторинг цін та знижок"
+                width="200" height="200" loading="lazy" class="w-full h-full p-2" />
             </div>
             <div
-              class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-brand text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg">
+              class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-brand-dark text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg">
               @shukach_ua_bot
             </div>
           </div>

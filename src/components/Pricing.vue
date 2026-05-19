@@ -1,4 +1,5 @@
 <script setup>
+import { PhCheckCircle, PhMinusCircle } from '@phosphor-icons/vue'
 const plans = [
   {
     name: 'Базовий',
@@ -54,7 +55,7 @@ const plans = [
         <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
           Прості та прозорі <span class="text-gradient">тарифи</span>
         </h2>
-        <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
           Обирайте план, який підходить саме вам. Економія стає ще приємнішою, коли ви контролюєте кожну гривню.
         </p>
       </div>
@@ -82,9 +83,9 @@ const plans = [
 
           <ul class="space-y-4 mb-10 flex-grow">
             <li v-for="feature in plan.features" :key="feature.text" class="flex items-center gap-3 text-sm font-medium"
-              :class="feature.status ? 'text-text-heading' : 'text-text-body/50'">
-              <i v-if="feature.status" class="ph-bold ph-check-circle text-brand text-lg"></i>
-              <i v-else class="ph-bold ph-minus-circle text-slate-200 text-lg"></i>
+              :class="feature.status ? 'text-text-heading' : 'text-text-body/75'">
+              <PhCheckCircle v-if="feature.status" :size="20" weight="bold" class="text-brand shrink-0" />
+              <PhMinusCircle v-else :size="20" weight="bold" class="text-slate-400 shrink-0" />
               {{ feature.text }}
             </li>
           </ul>

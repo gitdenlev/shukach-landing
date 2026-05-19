@@ -1,4 +1,5 @@
 <script setup>
+import { PhShieldCheck, PhArrowCounterClockwise } from '@phosphor-icons/vue'
 </script>
 
 <template>
@@ -8,7 +9,7 @@
         class="card-premium px-8 py-5 rounded-none md:rounded-3xl border-y md:border-border-subtle flex flex-col sm:flex-row items-center gap-8">
         <div class="flex items-center gap-4">
           <div class="w-10 h-10 shrink-0 rounded-full bg-success/10 flex items-center justify-center">
-            <i class="ph-fill ph-shield-check text-2xl text-success"></i>
+            <PhShieldCheck :size="24" weight="fill" class="text-success" />
           </div>
           <span class="text-sm font-bold text-text-heading">Безпечна оплата через Telegram Stars</span>
         </div>
@@ -17,7 +18,7 @@
 
         <div class="flex items-center justify-center gap-4">
           <div class="w-10 h-10 shrink-0 rounded-full bg-brand/10 flex items-center justify-center">
-            <i class="ph-fill ph-arrow-counter-clockwise text-2xl text-brand"></i>
+            <PhArrowCounterClockwise :size="24" weight="fill" class="text-brand" />
           </div>
           <span class="text-sm font-bold text-text-heading">Можливість скасувати в будь-який момент</span>
         </div>

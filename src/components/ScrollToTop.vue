@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { PhCaretUp } from '@phosphor-icons/vue'
 
 const isVisible = ref(false)
 
@@ -29,10 +30,10 @@ onUnmounted(() => {
     <button
       v-if="isVisible"
       @click="scrollToTop"
-      class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md border border-slate-100 shadow-xl shadow-brand/10 text-slate-500 hover:text-brand hover:border-brand/30 hover:-translate-y-1 transition-all duration-300 focus:outline-none"
+      class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-40 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md border border-slate-100 shadow-xl shadow-brand/10 text-slate-700 hover:text-brand hover:border-brand/30 hover:-translate-y-1 transition-all duration-300 focus:outline-none"
       aria-label="Повернутися нагору"
     >
-      <i class="ph-bold ph-caret-up text-xl"></i>
+      <PhCaretUp :size="20" weight="bold" />
     </button>
   </Transition>
 </template>

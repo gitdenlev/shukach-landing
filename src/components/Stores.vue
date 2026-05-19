@@ -1,13 +1,13 @@
 <script setup>
 const stores = [
-  { name: 'Comfy', logo: 'https://comfy.ua/skin/frontend/enterprise/comfy_3/modules/common/img/logo_main2.svg' },
-  { name: 'Allo', logo: 'https://logo.clearbit.com/allo.ua' },
-  { name: 'Citrus', logo: 'https://cdn.citrus.ua/images/brands/citrus.svg' },
-  { name: 'Moyo', logo: 'https://logo.clearbit.com/moyo.ua' },
-  { name: 'Foxtrot', logo: 'https://logo.clearbit.com/foxtrot.com.ua' },
-  { name: 'Brain', logo: 'https://logo.clearbit.com/brain.com.ua' },
-  { name: 'Epicentr', logo: 'https://logo.clearbit.com/epicentrk.ua' },
-  { name: 'Rozetka', logo: 'https://logo.clearbit.com/rozetka.com.ua' }
+  { name: 'Comfy', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Allo', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Citrus', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Moyo', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Foxtrot', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Brain', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Epicentr', logo: '/allo-ukraine-price-tracker.webp' },
+  { name: 'Rozetka', logo: '/allo-ukraine-price-tracker.webp' }
 ]
 </script>
 
@@ -25,7 +25,8 @@ const stores = [
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div v-for="store in stores" :key="store.name" class="card-premium p-8 flex items-center justify-center group">
-          <img :src="store.logo" :alt="`Логотип магазину ${store.name} — моніторинг цін через Telegram-бот Шукач`" loading="lazy"
+          <img :src="store.logo" :alt="`Логотип магазину ${store.name} — моніторинг цін через Telegram-бот Шукач`"
+            width="120" height="40" loading="lazy"
             class="h-10 w-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
         </div>
       </div>

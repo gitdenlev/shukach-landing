@@ -1,3 +1,7 @@
+<script setup>
+import { PhTelegramLogo, PhStorefront, PhLightning, PhEye } from '@phosphor-icons/vue'
+</script>
+
 <template>
   <section class="relative pt-32 pb-20 overflow-hidden">
     <!-- Decorative Blur Circles -->
@@ -27,7 +31,7 @@
 
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
             <a href="https://t.me/shukach_ua_bot" target="_blank" rel="noopener noreferrer" class="btn-primary group">
-              <i class="ph-fill ph-telegram-logo text-2xl group-hover:rotate-12 transition-transform ease-in-out duration-300"></i>
+              <PhTelegramLogo :size="24" weight="fill" class="group-hover:rotate-12 transition-transform ease-in-out duration-300" />
               Почати економити
             </a>
             <a href="#pricing" class="btn-secondary">
@@ -39,49 +43,51 @@
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-90">
             <div class="flex flex-col">
               <div class="flex items-center gap-2">
-                <i class="ph-duotone ph-storefront text-brand text-[28px]"></i>
+                <PhStorefront :size="28" weight="duotone" class="text-brand" />
                 <span class="text-2xl font-bold text-slate-800">15</span>
               </div>
-              <span class="text-sm text-slate-500 font-medium mt-1">Магазинів</span>
+              <span class="text-sm text-slate-600 font-medium mt-1">Магазинів</span>
             </div>
-            <div class="h-12 w-px bg-slate-200 hidden sm:block"></div>
             <div class="flex flex-col">
               <div class="flex items-center gap-2">
-                <i class="ph-duotone ph-lightning text-brand text-[28px]"></i>
+                <PhLightning :size="28" weight="duotone" class="text-brand" />
                 <span class="text-2xl font-bold text-slate-800">1 хв</span>
               </div>
-              <span class="text-sm text-slate-500 font-medium mt-1">Налаштування</span>
+              <span class="text-sm text-slate-600 font-medium mt-1">Налаштування</span>
             </div>
-            <div class="h-12 w-px bg-slate-200 hidden sm:block"></div>
             <div class="flex flex-col">
               <div class="flex items-center gap-2">
-                <i class="ph-duotone ph-eye text-brand text-[28px]"></i>
+                <PhEye :size="28" weight="duotone" class="text-brand" />
                 <span class="text-2xl font-bold text-slate-800">24/7</span>
               </div>
-              <span class="text-sm text-slate-500 font-medium mt-1">Моніторинг</span>
+              <span class="text-sm text-slate-600 font-medium mt-1">Моніторинг</span>
             </div>
           </div>
         </div>
 
         <!-- Visual Content -->
-        <div class="w-full lg:w-2/5 relative">
-          <div class="relative w-full aspect-square max-w-[500px] mx-auto">
+        <div class="w-full lg:w-2/5 relative flex items-center justify-center">
+          <div class="relative w-[320px] md:w-[420px] h-[420px] md:h-[520px] mx-auto">
 
-            <!-- Phone mockup 1 -->
+            <!-- Phone mockup 2 (back, right) -->
+            <div class="absolute right-0 top-1/2 -translate-y-1/3 z-10 scale-90 rotate-12">
+              <img src="/shukach-telegram-bot-alerts-demo.webp"
+                alt="Миттєві сповіщення про знижки від Telegram-бота Шукач"
+                width="240" height="480" fetchpriority="high"
+                class="w-[180px] md:w-[220px] mix-blend-multiply" />
+            </div>
+
+            <!-- Phone mockup 1 (front, left) -->
             <div class="absolute left-0 top-1/2 -translate-y-1/2 z-20 animate-float">
-              <div class="relative">
-                <img src="/shukach-telegram-bot-interface-main.webp" alt="Інтерфейс Telegram-бота Шукач — автоматичний моніторинг цін" class="w-[220px] md:w-[260px] rounded-[2rem]" />
-              </div>
+              <img src="/shukach-telegram-bot-interface-main.webp"
+                alt="Інтерфейс бота Шукач на екрані смартфона"
+                width="260" height="520" fetchpriority="high"
+                class="w-[220px] md:w-[260px] mix-blend-multiply" />
             </div>
 
-            <!-- Phone mockup 2 -->
-            <div class="absolute right-0 top-1/2 -translate-y-1/3 z-10 opacity-60 scale-90 rotate-12">
-              <div class="relative">
-                <img src="/shukach-telegram-bot-alerts-demo.webp" alt="Миттєві сповіщення про знижки від Telegram-бота Шукач" class="w-[200px] md:w-[240px] rounded-[2rem]" />
-              </div>
-            </div>
           </div>
         </div>
+
 
       </div>
     </div>

@@ -1,24 +1,26 @@
 <script setup>
+import { PhMagnifyingGlass, PhLink, PhBellRinging, PhArrowDown } from '@phosphor-icons/vue'
+
 const steps = [
   {
     number: '01',
-    icon: 'ph-magnifying-glass',
+    icon: PhMagnifyingGlass,
     title: 'Знайдіть товар',
     description: 'Відкрийте будь-який магазин та знайдіть товар, який хочете відстежити.',
     color: 'brand',
   },
   {
     number: '02',
-    icon: 'ph-link',
+    icon: PhLink,
     title: 'Надішліть посилання',
     description: 'Скопіюйте посилання на сторінку товару та надішліть його боту.',
     color: 'accent',
   },
   {
     number: '03',
-    icon: 'ph-bell-ringing',
+    icon: PhBellRinging,
     title: 'Отримайте сповіщення',
-    description: 'Шукач відслідковує ціну 24/7 та миттєво сповіщає вас, щойно вона впаде або товар з\'явиться в наявності.',
+    description: "Шукач відслідковує ціну 24/7 та миттєво сповіщає вас, щойно вона впаде або товар з'явиться в наявності.",
     color: 'success',
   },
 ]
@@ -36,10 +38,6 @@ const steps = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Section Header -->
       <div class="text-center mb-20">
-        <div class="inline-flex items-center gap-2 bg-brand/8 text-brand px-4 py-2 rounded-full text-sm font-bold mb-6 border border-brand/15">
-          <i class="ph-bold ph-lightning text-base"></i>
-          Просто та швидко
-        </div>
         <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
           Почати за <span class="text-gradient">3 кроки</span>
         </h2>
@@ -51,23 +49,20 @@ const steps = [
       <!-- Steps -->
       <div class="relative">
         <!-- Connecting line (desktop) -->
-        <div class="hidden lg:block absolute top-[72px] left-1/2 -translate-x-1/2 w-[calc(66%-80px)] h-[2px] connector-line"></div>
+        <div
+          class="hidden lg:block absolute top-[72px] left-1/2 -translate-x-1/2 w-[calc(66%-80px)] h-[2px] connector-line">
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          <div
-            v-for="(step, index) in steps"
-            :key="step.number"
-            class="step-card relative flex flex-col items-center text-center p-8 rounded-3xl"
-          >
+          <div v-for="(step, index) in steps" :key="step.number"
+            class="step-card relative flex flex-col items-center text-center p-8 rounded-3xl">
             <!-- Step Number Chip -->
             <div class="absolute -top-4 left-8 step-number">{{ step.number }}</div>
 
             <!-- Icon Container -->
-            <div
-              class="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 icon-ring shadow-lg"
-              :class="`icon-${step.color}`"
-            >
-              <i :class="[`ph-bold`, step.icon, 'text-3xl', `icon-color-${step.color}`]"></i>
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 icon-ring shadow-lg"
+              :class="`icon-${step.color}`">
+              <component :is="step.icon" :size="32" weight="bold" :class="`icon-color-${step.color}`" />
             </div>
 
             <h3 class="text-xl font-extrabold text-text-heading mb-3">{{ step.title }}</h3>
@@ -75,7 +70,7 @@ const steps = [
 
             <!-- Arrow between steps (mobile) -->
             <div v-if="index < steps.length - 1" class="md:hidden mt-8 flex justify-center">
-              <i class="ph-bold ph-arrow-down text-2xl text-brand/30"></i>
+              <PhArrowDown :size="24" weight="bold" class="text-brand/30" />
             </div>
           </div>
         </div>
@@ -122,23 +117,40 @@ const steps = [
 .icon-brand {
   background: rgba(139, 92, 246, 0.1);
 }
-.icon-brand i { color: var(--brand); }
+
+.icon-brand i {
+  color: var(--brand);
+}
 
 .icon-accent {
   background: rgba(250, 204, 21, 0.12);
 }
-.icon-accent i { color: #ca8a04; }
+
+.icon-accent i {
+  color: #ca8a04;
+}
 
 .icon-success {
   background: rgba(34, 197, 94, 0.1);
 }
-.icon-success i { color: var(--success); }
 
-.icon-color-brand { color: var(--brand); }
-.icon-color-accent { color: #ca8a04; }
-.icon-color-success { color: var(--success); }
+.icon-success i {
+  color: var(--success);
+}
+
+.icon-color-brand {
+  color: var(--brand);
+}
+
+.icon-color-accent {
+  color: #ca8a04;
+}
+
+.icon-color-success {
+  color: var(--success);
+}
 
 .connector-line {
-  background: linear-gradient(90deg, rgba(139,92,246,0.2), rgba(192,132,252,0.3), rgba(139,92,246,0.2));
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.2), rgba(192, 132, 252, 0.3), rgba(139, 92, 246, 0.2));
 }
 </style>

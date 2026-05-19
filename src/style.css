@@ -1,24 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Brand Colors (10%) */
   --brand: #8B5CF6;
+  --brand-dark: #6D28D9;
   --brand-light: #C084FC;
-  --brand-gradient: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
-  
+  --brand-gradient: linear-gradient(135deg, #6D28D9 0%, #8B5CF6 100%);
+
   /* Accent Colors */
-  --highlight: #FACC15; /* Electric Yellow */
-  --success: #22C55E;   /* Success Green */
-  
+  --highlight: #FACC15;
+  /* Electric Yellow */
+  --success: #22C55E;
+  /* Success Green */
+
   /* Neutrals (60%) */
   --bg-main: #F8FAFC;
   --bg-card: #FFFFFF;
   --border-subtle: #F1F5F9;
-  
+
   /* Typography */
   --text-heading: #0F172A;
-  --text-body: #64748B;
-  
+  --text-body: #475569;
+
   /* Effects */
   --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
   --glass-bg: rgba(255, 255, 255, 0.8);
@@ -30,16 +35,61 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/manrope-v20-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/manrope-v20-cyrillic_latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/manrope-v20-cyrillic_latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/manrope-v20-cyrillic_latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/manrope-v20-cyrillic_latin-800.woff2') format('woff2');
+}
+
 body {
   color: var(--text-body);
   background-color: var(--bg-main);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Manrope';
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 /* Typography System */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-heading);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -71,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: -1;
   background-color: var(--bg-main);
-  background-image: 
+  background-image:
     radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.05) 0px, transparent 50%);
   filter: blur(80px);
@@ -80,7 +130,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Cards & Containers */
 .card-premium {
   background-color: var(--bg-card);
-  border-radius: 1.5rem; /* rounded-3xl equivalent */
+  border-radius: 1.5rem;
+  /* rounded-3xl equivalent */
   box-shadow: var(--card-shadow);
   border: 1px solid var(--border-subtle);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -158,13 +209,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulse-success {
-  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
 }
 
 /* Animations */
 @keyframes mesh-flow {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
 }

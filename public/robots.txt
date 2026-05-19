@@ -1,0 +1,20 @@
+# robots.txt — Shukach (https://shukach-landing.vercel.app)
+
+# ——— Allow all search engine crawlers ———
+User-agent: *
+Allow: /
+
+# ——— Disallow technical & framework directories ———
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /.vite/
+Disallow: /coverage/
+
+# ——— Canonical host ———
+Host: https://shukach-landing.vercel.app
+
+# ——— Sitemap ———
+Sitemap: https://shukach-landing.vercel.app/sitemap.xml

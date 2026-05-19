@@ -1,4 +1,5 @@
 <script setup>
+import { PhShareNetwork, PhUserPlus, PhGift } from '@phosphor-icons/vue'
 </script>
 
 <template>
@@ -31,11 +32,11 @@
 
           <div class="flex flex-wrap gap-8">
             <div class="flex flex-col">
-              <span class="text-3xl font-black text-text-heading">3</span>
+              <span class="text-3xl font-extrabold text-text-heading">3</span>
               <span class="text-xs font-bold text-text-body uppercase tracking-widest mt-1">Друзів максимум</span>
             </div>
             <div class="flex flex-col">
-              <span class="text-3xl font-black text-text-heading">+1</span>
+              <span class="text-3xl font-extrabold text-text-heading">+1</span>
               <span class="text-xs font-bold text-text-body uppercase tracking-widest mt-1">Слот за кожного</span>
             </div>
           </div>
@@ -51,7 +52,7 @@
         <div class="flex-1 grid gap-4 w-full max-w-md">
           <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle flex items-center gap-5">
             <div class="w-12 h-12 bg-brand/5 rounded-xl flex items-center justify-center shrink-0">
-              <i class="ph-bold ph-share-network text-brand text-2xl"></i>
+              <PhShareNetwork :size="24" weight="bold" class="text-brand" />
             </div>
             <div>
               <p class="text-base font-bold text-text-heading">Поділіться посиланням</p>
@@ -62,7 +63,7 @@
           <div
             class="bg-bg-main p-6 rounded-2xl border border-border-subtle flex items-center gap-5 lg:translate-x-6">
             <div class="w-12 h-12 bg-brand/5 rounded-xl flex items-center justify-center shrink-0">
-              <i class="ph-bold ph-user-plus text-brand text-2xl"></i>
+              <PhUserPlus :size="24" weight="bold" class="text-brand" />
             </div>
             <div>
               <p class="text-base font-bold text-text-heading">Друг додає товар</p>
@@ -72,7 +73,7 @@
 
           <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle flex items-center gap-5">
             <div class="w-12 h-12 bg-success/5 rounded-xl flex items-center justify-center shrink-0">
-              <i class="ph-bold ph-gift text-success text-2xl"></i>
+              <PhGift :size="24" weight="bold" class="text-success" />
             </div>
             <div>
               <p class="text-base font-bold text-text-heading">Отримуєте бонуси</p>

@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { PhCaretDown } from '@phosphor-icons/vue'
 
 const faqs = ref([
   {
@@ -48,7 +49,7 @@ const toggleFaq = (index) => {
         <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">
           Відповіді на <span class="text-gradient">популярні питання</span>
         </h2>
-        <p class="text-lg text-slate-500 font-medium">Все, що ви хотіли знати про роботу Шукача</p>
+        <p class="text-lg text-slate-600 font-medium">Все, що ви хотіли знати про роботу Шукача</p>
       </div>
 
       <div class="space-y-6">
@@ -64,10 +65,7 @@ const toggleFaq = (index) => {
           >
             <span class="font-bold text-text-heading text-lg md:text-xl">{{ faq.question }}</span>
             <div class="w-10 h-10 rounded-full bg-bg-main flex items-center justify-center shrink-0 group-hover:bg-brand/10 transition-colors">
-              <i 
-                class="ph-bold ph-caret-down text-brand transition-transform duration-500"
-                :class="{ 'rotate-180': faq.open }"
-              ></i>
+              <PhCaretDown :size="20" weight="bold" class="text-brand transition-transform duration-500" :class="{ 'rotate-180': faq.open }" />
             </div>
           </button>
           
