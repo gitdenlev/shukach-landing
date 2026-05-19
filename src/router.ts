@@ -53,7 +53,7 @@ const router = createRouter({
   }
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   if (to.meta.title) {
     document.title = to.meta.title as string
   }
@@ -67,8 +67,6 @@ router.beforeEach((to, from, next) => {
     }
     metaTag.setAttribute('content', to.meta.description as string)
   }
-  
-  next()
 })
 
 export default router
