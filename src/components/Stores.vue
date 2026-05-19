@@ -24,33 +24,13 @@ const stores = [
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div 
-          v-for="store in stores" 
-          :key="store.name"
-          class="card-premium p-8 flex items-center justify-center group"
-        >
-          <img 
-            :src="store.logo" 
-            :alt="store.name" 
-            class="h-10 w-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" 
-          />
-        </div>
-      </div>
-
-      <!-- Marquee-like subtext -->
-      <div class="mt-16 flex justify-center">
-        <div class="inline-flex items-center gap-4 bg-bg-card px-6 py-3 rounded-full border border-border-subtle shadow-sm">
-          <span class="flex -space-x-2">
-            <div v-for="i in 3" :key="i" class="w-8 h-8 rounded-full border-2 border-white bg-bg-main flex items-center justify-center overflow-hidden">
-               <i class="ph ph-user text-text-body text-xs"></i>
-            </div>
-          </span>
-          <span class="text-sm font-bold text-text-heading">Приєднуйтесь до 50,000+ користувачів</span>
+        <div v-for="store in stores" :key="store.name" class="card-premium p-8 flex items-center justify-center group">
+          <img :src="store.logo" :alt="`Логотип магазину ${store.name} — моніторинг цін через Telegram-бот Шукач`" loading="lazy"
+            class="h-10 w-full object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" />
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

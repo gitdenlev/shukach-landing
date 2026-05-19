@@ -41,9 +41,8 @@
           </div>
 
           <div>
-            <a href="https://t.me/shukach_ua_bot" class="btn-primary">
+            <a href="https://t.me/shukach_ua_bot" target="_blank" rel="noopener noreferrer" class="btn-primary">
               <span>Отримати посилання</span>
-              <i class="ph-bold ph-arrow-right"></i>
             </a>
           </div>
         </div>

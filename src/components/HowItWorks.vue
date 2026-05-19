@@ -4,14 +4,14 @@ const steps = [
     number: '01',
     icon: 'ph-magnifying-glass',
     title: 'Знайдіть товар',
-    description: 'Відкрийте будь-який магазин: Rozetka, Comfy, Allo та інші. Знайдіть товар, який хочете відстежити.',
+    description: 'Відкрийте будь-який магазин та знайдіть товар, який хочете відстежити.',
     color: 'brand',
   },
   {
     number: '02',
     icon: 'ph-link',
     title: 'Надішліть посилання',
-    description: 'Скопіюйте URL сторінки товару та надішліть його боту @shukach_ua_bot у Telegram.',
+    description: 'Скопіюйте посилання на сторінку товару та надішліть його боту.',
     color: 'accent',
   },
   {
@@ -83,8 +83,7 @@ const steps = [
 
       <!-- Bottom CTA -->
       <div class="mt-20 text-center">
-        <a href="https://t.me/shukach_ua_bot" class="btn-primary group">
-          <i class="ph-fill ph-telegram-logo text-2xl group-hover:scale-110 transition-transform"></i>
+        <a href="https://t.me/shukach_ua_bot" target="_blank" rel="noopener noreferrer" class="btn-primary group">
           Спробувати зараз — це безкоштовно
         </a>
         <p class="mt-4 text-sm text-text-body font-medium">Перший крок займе менше хвилини</p>

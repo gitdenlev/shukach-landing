@@ -26,8 +26,8 @@
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-            <a href="https://t.me/shukach_ua_bot" class="btn-primary group">
-              <i class="ph-fill ph-telegram-logo text-2xl group-hover:rotate-12 transition-transform"></i>
+            <a href="https://t.me/shukach_ua_bot" target="_blank" rel="noopener noreferrer" class="btn-primary group">
+              <i class="ph-fill ph-telegram-logo text-2xl group-hover:rotate-12 transition-transform ease-in-out duration-300"></i>
               Почати економити
             </a>
             <a href="#pricing" class="btn-secondary">
@@ -36,20 +36,29 @@
           </div>
 
           <!-- Stats/Trust -->
-          <div class="flex flex-wrap justify-center lg:justify-start gap-8 opacity-80">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-8 opacity-90">
             <div class="flex flex-col">
-              <span class="text-2xl font-bold">100+</span>
-              <span class="text-sm text-slate-500 font-medium">Магазинів</span>
+              <div class="flex items-center gap-2">
+                <i class="ph-duotone ph-storefront text-brand text-[28px]"></i>
+                <span class="text-2xl font-bold text-slate-800">15</span>
+              </div>
+              <span class="text-sm text-slate-500 font-medium mt-1">Магазинів</span>
             </div>
-            <div class="h-10 w-px bg-slate-200 hidden sm:block"></div>
+            <div class="h-12 w-px bg-slate-200 hidden sm:block"></div>
             <div class="flex flex-col">
-              <span class="text-2xl font-bold">50k+</span>
-              <span class="text-sm text-slate-500 font-medium">Користувачів</span>
+              <div class="flex items-center gap-2">
+                <i class="ph-duotone ph-lightning text-brand text-[28px]"></i>
+                <span class="text-2xl font-bold text-slate-800">1 хв</span>
+              </div>
+              <span class="text-sm text-slate-500 font-medium mt-1">Налаштування</span>
             </div>
-            <div class="h-10 w-px bg-slate-200 hidden sm:block"></div>
+            <div class="h-12 w-px bg-slate-200 hidden sm:block"></div>
             <div class="flex flex-col">
-              <span class="text-2xl font-bold">24/7</span>
-              <span class="text-sm text-slate-500 font-medium">Моніторинг</span>
+              <div class="flex items-center gap-2">
+                <i class="ph-duotone ph-eye text-brand text-[28px]"></i>
+                <span class="text-2xl font-bold text-slate-800">24/7</span>
+              </div>
+              <span class="text-sm text-slate-500 font-medium mt-1">Моніторинг</span>
             </div>
           </div>
         </div>
@@ -61,14 +70,14 @@
             <!-- Phone mockup 1 -->
             <div class="absolute left-0 top-1/2 -translate-y-1/2 z-20 animate-float">
               <div class="relative">
-                <img src="/123.png" alt="Interface 1" class="w-[220px] md:w-[260px] rounded-[2rem]" />
+                <img src="/shukach-telegram-bot-interface-main.webp" alt="Інтерфейс Telegram-бота Шукач — автоматичний моніторинг цін" class="w-[220px] md:w-[260px] rounded-[2rem]" />
               </div>
             </div>
 
             <!-- Phone mockup 2 -->
             <div class="absolute right-0 top-1/2 -translate-y-1/3 z-10 opacity-60 scale-90 rotate-12">
               <div class="relative">
-                <img src="/1234.png" alt="Interface 2" class="w-[200px] md:w-[240px] rounded-[2rem]" />
+                <img src="/shukach-telegram-bot-alerts-demo.webp" alt="Миттєві сповіщення про знижки від Telegram-бота Шукач" class="w-[200px] md:w-[240px] rounded-[2rem]" />
               </div>
             </div>
           </div>

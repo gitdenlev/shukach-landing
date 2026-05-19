@@ -2,6 +2,7 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import CookieConsent from './components/CookieConsent.vue'
+import ScrollToTop from './components/ScrollToTop.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import CookieConsent from './components/CookieConsent.vue'
     </div>
     <Footer />
     <CookieConsent />
+    <ScrollToTop />
   </div>
 </template>
 

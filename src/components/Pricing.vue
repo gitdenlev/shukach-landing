@@ -21,7 +21,7 @@ const plans = [
     description: 'Для справжніх мисливців',
     features: [
       { text: '15 активних слотів', status: true },
-      { text: 'Оновлення щогодини ⚡', status: true },
+      { text: 'Раз на 6 годин ⚡', status: true },
       { text: 'Пріоритет №1 🚀', status: true },
       { text: 'Цільова ціна ✅', status: true },
       { text: 'Моніторинг наявності', status: true },
@@ -90,6 +90,7 @@ const plans = [
           </ul>
 
           <a href="https://t.me/shukach_ua_bot"
+            target="_blank" rel="noopener noreferrer"
             class="flex items-center justify-center w-full text-center py-4 rounded-xl font-bold transition-all"
             :class="plan.popular ? 'btn-primary' : 'btn-secondary'">
             {{ plan.button }}

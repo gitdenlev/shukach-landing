@@ -16,11 +16,10 @@ watch(mobileMenuOpen, (val) => {
 const closeMenu = () => { mobileMenuOpen.value = false }
 
 const navLinks = [
-  { to: '/#how-it-works', label: 'Як це працює', icon: 'ph-lightning' },
-  { to: '/#features',     label: 'Можливості',   icon: 'ph-sparkle' },
-  { to: '/#pricing',      label: 'Тарифи',        icon: 'ph-tag' },
-  { to: '/#testimonials', label: 'Про нас',        icon: 'ph-rocket-launch' },
-  { to: '/#faq',          label: 'FAQ',            icon: 'ph-chat-circle-dots' },
+  { to: '/#how-it-works', label: 'Як це працює' },
+  { to: '/#features',     label: 'Можливості' },
+  { to: '/#pricing',      label: 'Тарифи' },
+  { to: '/#faq',          label: 'FAQ' },
 ]
 
 onMounted(() => window.addEventListener('scroll', handleScroll, { passive: true }))
@@ -35,15 +34,15 @@ onUnmounted(() => {
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="scrolled || mobileMenuOpen ? 'header-scrolled' : 'header-transparent'"
   >
-    <nav class="section-container h-20 flex-between">
+    <nav class="section-container h-20 flex justify-between items-center">
 
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-3 group cursor-pointer" @click="closeMenu">
         <div class="w-10 h-10 rounded-full flex-center overflow-hidden border shadow-sm group-hover:shadow-md transition-all"
           :class="scrolled ? 'border-border-subtle' : 'border-white/20'">
-          <img src="/logo.PNG" alt="Шукач Logo" class="w-full h-full object-cover" />
+          <img src="/shukach-bot-logo.webp" alt="Логотип Telegram-бота Шукач для моніторингу цін та знижок" class="w-full h-full object-cover" />
         </div>
-        <span class="font-extrabold text-2xl text-text-heading tracking-tight">Шукач</span>
+        <span class="font-medium text-xl text-text-heading tracking-tight">Шукач</span>
       </router-link>
 
       <!-- Desktop Navigation -->
@@ -56,7 +55,7 @@ onUnmounted(() => {
 
       <!-- Desktop CTA -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="https://t.me/shukach_ua_bot" class="btn-primary !px-6 !py-2.5 !text-sm">
+        <a href="https://t.me/shukach_ua_bot" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 text-sm font-semibold rounded-full border border-brand text-brand bg-transparent hover:bg-brand hover:text-white transition-colors duration-300">
           Спробувати
         </a>
       </div>
@@ -117,6 +116,8 @@ onUnmounted(() => {
         <div class="px-4 pb-8 pt-4 border-t border-border-subtle mt-auto">
           <a
             href="https://t.me/shukach_ua_bot"
+            target="_blank"
+            rel="noopener noreferrer"
             class="btn-primary w-full justify-center text-base py-4"
             @click="closeMenu"
           >

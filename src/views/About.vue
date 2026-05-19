@@ -5,7 +5,7 @@
   <div class="min-h-screen pt-24 pb-16">
     <div class="max-w-7xl mx-auto px-6 md:px-12 mt-10">
 
-      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-10 tracking-tight">Про Шукач</h1>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-10 tracking-tight">Про нас</h1>
 
       <div class="text-lg text-slate-600 space-y-10 leading-relaxed max-w-5xl">
 
