@@ -4,33 +4,29 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Головна сторінка — найвища пріоритетність -->
   <url>
-    <loc>https://shukach-landing.vercel.app/</loc>
+    <loc>https://shukach.in.ua/</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Про нас -->
   <url>
-    <loc>https://shukach-landing.vercel.app/about</loc>
+    <loc>https://shukach.in.ua/about</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Політика конфіденційності -->
   <url>
-    <loc>https://shukach-landing.vercel.app/privacy</loc>
+    <loc>https://shukach.in.ua/privacy</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Умови використання -->
   <url>
-    <loc>https://shukach-landing.vercel.app/terms</loc>
+    <loc>https://shukach.in.ua/terms</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
