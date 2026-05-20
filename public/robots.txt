@@ -14,7 +14,7 @@ Disallow: /.vite/
 Disallow: /coverage/
 
 # ——— Canonical host ———
-Host: https://shukach-landing.vercel.app
+Host: https://shukach.in.ua
 
 # ——— Sitemap ———
-Sitemap: https://shukach-landing.vercel.app/sitemap.xml
+Sitemap: https://shukach.in.ua/sitemap.xml
