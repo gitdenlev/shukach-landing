@@ -26,5 +26,10 @@
     "typescript": "~6.0.2",
     "vite": "^8.0.12",
     "vue-tsc": "^3.2.8"
+  },
+  "overrides": {
+    "@vercel/speed-insights": {
+      "vue-router": "$vue-router"
+    }
   }
 }
