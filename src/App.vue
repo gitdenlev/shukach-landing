@@ -1,4 +1,5 @@
 <script setup>
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import CookieConsent from './components/CookieConsent.vue'
@@ -15,6 +16,7 @@ import ScrollToTop from './components/ScrollToTop.vue'
     <Footer />
     <CookieConsent />
     <ScrollToTop />
+    <SpeedInsights />
   </div>
 </template>
 
