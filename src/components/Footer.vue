@@ -12,7 +12,7 @@
         <div class="col-span-1 md:col-span-5 flex flex-col gap-6 items-start">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full overflow-hidden shadow-sm border border-border-subtle">
-              <img src="/shukach-bot-logo.webp" alt="Логотип Шукач — ваш надійний трекер цін та знижок у Telegram"
+              <img src="/favicon.svg" alt="Логотип Шукач — ваш надійний трекер цін та знижок у Telegram"
                 width="40" height="40" class="w-10 h-10 object-cover" />
             </div>
             <span class="font-extrabold text-2xl text-text-heading tracking-tight">Шукач</span>

@@ -40,7 +40,7 @@ onUnmounted(() => {
         <div
           class="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden border shadow-sm group-hover:shadow-md transition-all"
           :class="scrolled ? 'border-border-subtle' : 'border-white/20'">
-          <img src="/shukach-bot-logo.webp" alt="Логотип Telegram-бота Шукач для моніторингу цін та знижок" width="40"
+          <img src="/favicon.svg" alt="Логотип Telegram-бота Шукач для моніторингу цін та знижок" width="40"
             height="40" class="w-full h-full object-cover" />
         </div>
         <span class="font-extrabold text-2xl text-text-heading tracking-tight">Шукач</span>
