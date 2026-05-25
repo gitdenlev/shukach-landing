@@ -60,6 +60,7 @@
             <span class="text-xs font-bold uppercase tracking-widest text-text-body/80">Компанія</span>
             <router-link to="/about" class="text-base font-medium text-text-body hover:text-brand transition-colors">Про
               нас</router-link>
+            <router-link to="/blog" class="text-base font-medium text-text-body hover:text-brand transition-colors">Блог</router-link>
           </div>
 
         </div>

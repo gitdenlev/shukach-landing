@@ -3,6 +3,8 @@ import Home from './views/Home.vue'
 import Privacy from './views/Privacy.vue'
 import Terms from './views/Terms.vue'
 import About from './views/About.vue'
+import Blog from './views/Blog.vue'
+import BlogPost from './views/BlogPost.vue'
 
 const routes = [
   { 
@@ -35,6 +37,22 @@ const routes = [
     meta: { 
       title: 'Про Шукач — Ваш розумний трекер цін',
       description: 'Шукач — це автономний Telegram-бот для моніторингу цін та знижок в українських магазинах. Дізнайтеся більше про наш проект.'
+    }
+  },
+  {
+    path: '/blog',
+    component: Blog,
+    meta: {
+      title: 'Блог Шукача — Поради про економію та розумні покупки',
+      description: 'Корисні статті про фінансову грамотність, відстеження цін та розумні покупки в українських магазинах.'
+    }
+  },
+  {
+    path: '/blog/:slug',
+    component: BlogPost,
+    meta: {
+      title: 'Блог | Шукач',
+      description: 'Читайте корисні статті від команди Шукача.'
     }
   }
 ]

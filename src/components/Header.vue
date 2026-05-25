@@ -21,6 +21,7 @@ const navLinks = [
   { to: '/#features', label: 'Можливості' },
   { to: '/#pricing', label: 'Тарифи' },
   { to: '/#faq', label: 'FAQ' },
+  { to: '/blog', label: 'Блог' },
 ]
 
 onMounted(() => window.addEventListener('scroll', handleScroll, { passive: true }))
