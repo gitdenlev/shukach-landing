@@ -17,12 +17,7 @@ const posts = computed(() => getAllPosts());
 const searchQuery = ref("");
 const selectedCategory = ref("Всі");
 
-// Extract unique categories dynamically from loaded posts
-const categories = computed(() => {
-  const allCats = posts.value.map((post) => post.category).filter(Boolean);
-  const uniqueCats = Array.from(new Set(allCats));
-  return ["Всі", ...uniqueCats.sort()];
-});
+
 
 // Filter posts by search query and selected category
 const filteredPosts = computed(() => {
@@ -51,31 +46,14 @@ function goToPost(slug: string) {
   router.push(`/blog/${slug}`);
 }
 
-function selectCategory(category: string) {
-  selectedCategory.value = category;
-}
+
 
 function resetFilters() {
   searchQuery.value = "";
   selectedCategory.value = "Всі";
 }
 
-// Helper to get correct Ukrainian plural form for articles
-function getPostWord(count: number) {
-  const lastDigit = count % 10;
-  const lastTwoDigits = count % 100;
 
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-    return "статей";
-  }
-  if (lastDigit === 1) {
-    return "стаття";
-  }
-  if (lastDigit >= 2 && lastDigit <= 4) {
-    return "статті";
-  }
-  return "статей";
-}
 </script>
 
 <template>

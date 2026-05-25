@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, onUnmounted } from "vue";
+import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { getPostBySlug, getAllPosts } from "../utils/blogLoader";
 import {
@@ -123,6 +123,46 @@ function share() {
         </main>
       </div>
 
+      <!-- Related Posts Section (Full Width Bottom Area) -->
+      <section v-if="relatedPosts.length" class="post-related-section">
+        <div class="post-related-section__inner">
+          <h3 class="post-related-title">Читайте також</h3>
+          <div class="post-related-grid">
+            <article
+              v-for="rel in relatedPosts"
+              :key="rel.slug"
+              class="post-related-card"
+              @click="goToPost(rel.slug)"
+              :tabindex="0"
+              @keydown.enter="goToPost(rel.slug)"
+            >
+              <div class="post-related-card__image-wrap">
+                <img
+                  :src="rel.image"
+                  :alt="rel.imageAlt"
+                  class="post-related-card__image"
+                  loading="lazy"
+                />
+                <span class="post-related-card__category">{{
+                  rel.category
+                }}</span>
+              </div>
+              <div class="post-related-card__body">
+                <div class="post-related-card__meta">
+                  <span>{{ rel.formattedDate }}</span>
+                  <span>·</span>
+                  <span>
+                    <PhClock :size="12" />
+                    {{ rel.readTime }} хв читання
+                  </span>
+                </div>
+                <h4 class="post-related-card__title">{{ rel.title }}</h4>
+                <p class="post-related-card__excerpt">{{ rel.excerpt }}</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </template>
   </div>
 </template>
@@ -133,6 +173,7 @@ function share() {
   min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 0;
+  background: var(--bg-main);
 }
 
 .post-not-found {
@@ -752,27 +793,8 @@ function share() {
   }
 }
 
-.fade-in-enter-active,
-.fade-in-leave-active {
-  transition:
-    opacity 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.fade-in-enter-from,
-.fade-in-leave-to {
-  opacity: 0;
-  transform: translateY(15px);
-}
-
 /* ── Responsive Spacing ── */
 @media (max-width: 639px) {
-  .post-floating-back {
-    bottom: 1.5rem;
-    left: 1.5rem;
-    padding: 0.65rem 1.15rem;
-    font-size: 0.85rem;
-  }
   .post-page {
     padding-top: 100px;
   }
