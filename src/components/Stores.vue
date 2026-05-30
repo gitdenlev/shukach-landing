@@ -1,13 +1,12 @@
 <script setup>
 const stores = [
-  { name: 'Comfy', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Allo', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Citrus', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Moyo', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Foxtrot', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Brain', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Epicentr', logo: '/allo-ukraine-price-tracker.webp' },
-  { name: 'Rozetka', logo: '/allo-ukraine-price-tracker.webp' }
+  { name: 'Comfy', logo: '/shops/shukach-supported-shop-comfy.webp' },
+  { name: 'Allo', logo: '/shops/shukach-supported-shop-allo.webp' },
+  { name: 'Citrus', logo: '/shops/shukach-supported-shop-citrus.webp' },
+  { name: 'Moyo', logo: '/shops/shukach-supported-shop-moyo.webp' },
+  { name: 'Foxtrot', logo: '/shops/shukach-supported-shop-foxtrot.webp' },
+  { name: 'Brain', logo: '/shops/shukach-supported-shop-brain.webp' },
+  { name: 'Rozetka', logo: '/shops/shukach-supported-shop-rozetka.webp' }
 ]
 </script>
 
