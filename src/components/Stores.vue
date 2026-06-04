@@ -5,8 +5,7 @@ const stores = [
   { name: 'Citrus', logo: '/shops/shukach-supported-shop-citrus.webp' },
   { name: 'Moyo', logo: '/shops/shukach-supported-shop-moyo.webp' },
   { name: 'Foxtrot', logo: '/shops/shukach-supported-shop-foxtrot.webp' },
-  { name: 'Brain', logo: '/shops/shukach-supported-shop-brain.webp' },
-  { name: 'Rozetka', logo: '/shops/shukach-supported-shop-rozetka.webp' }
+  { name: 'Brain', logo: '/shops/shukach-supported-shop-brain.webp' }
 ]
 </script>
 
