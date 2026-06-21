@@ -44,7 +44,7 @@ import { PhTelegramLogo, PhStorefront, PhLightning, PhEye } from '@phosphor-icon
             <div class="flex flex-col">
               <div class="flex items-center gap-2">
                 <PhStorefront :size="28" weight="duotone" class="text-brand" />
-                <span class="text-2xl font-bold text-slate-800">15</span>
+                <span class="text-2xl font-bold text-slate-800">6</span>
               </div>
               <span class="text-sm text-slate-600 font-medium mt-1">Магазинів</span>
             </div>

@@ -11,6 +11,6 @@ declare module '*.md' {
   export default content
 }
 
-declare module 'marked' {
-  export const marked: any;
-}
+// declare module 'marked' {
+//   export const marked: any;
+// }
